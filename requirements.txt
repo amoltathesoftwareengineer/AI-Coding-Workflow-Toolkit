@@ -1,4 +1,5 @@
 
 # AI-Coding-Workflow-Toolkit
-# Uses Python standard library only.
-# No third-party dependencies are required.
+# Core scripts use the Python standard library.
+# Ruff is used for automated code quality checks.
+ruff
