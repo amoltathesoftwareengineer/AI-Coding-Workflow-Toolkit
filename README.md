@@ -1,96 +1,131 @@
 # AI Coding Workflow Toolkit
 
-A developer productivity toolkit for organizing AI-assisted software development workflows and improving consistency across coding tasks.
+A Python-based developer productivity toolkit for repository analysis, Python syntax validation, reusable development templates, and consistent AI-assisted coding workflows.
 
 ## Overview
 
-The AI Coding Workflow Toolkit provides reusable workflows and utilities for repository inspection, task planning, code review preparation, documentation support, and development quality checks.
+The AI Coding Workflow Toolkit helps developers inspect repository structures, validate Python syntax, organize development tasks, and standardize code review and bug reporting.
 
-It is designed to complement existing development tools rather than replace developer judgment.
+It is designed to complement existing development tools while keeping developers in control of code quality, security, and implementation decisions.
 
 ## Key Features
 
-- Repository structure analysis
-- Development task templates
-- Code review checklists
-- Documentation workflow helpers
-- Test execution helpers
-- Configurable coding conventions
-- Git change summaries
-- Development workflow documentation
+- **Repository Analysis:** Summarize files, directories, file extensions, and Python files.
+- **Python Syntax Checking:** Detect Python syntax errors using Python's built-in compilation utilities.
+- **Automated Unit Tests:** Validate core functionality with the `unittest` framework.
+- **Task Planning:** Organize requirements, implementation steps, and acceptance criteria.
+- **Code Review Template:** Support consistent review of correctness, readability, and maintainability.
+- **Bug Report Template:** Document reproduction steps, expected behavior, and actual results.
+- **Workflow Configuration:** Store reusable development workflow settings in JSON.
+- **Developer Documentation:** Keep workflow instructions and usage guidance organized.
 
 ## Technology Stack
 
-- Python
-- Git
-- Shell scripting where appropriate
+- Python 3
+- Git and GitHub
+- JSON
 - Markdown
-- Optional language model integration
+- Python standard library (`unittest`, `py_compile`, `pathlib`)
 
 ## Project Structure
 
 ```text
 AI-Coding-Workflow-Toolkit/
-├── README.md
-├── requirements.txt
-├── workflows/
-├── scripts/
-├── templates/
 ├── config/
-└── tests/
+│   └── workflow_config.json
+├── scripts/
+│   ├── analyze_repository.py
+│   └── check_python.py
+├── templates/
+│   ├── task_plan.md
+│   ├── code_review.md
+│   └── bug_report.md
+├── tests/
+│   ├── test_analyzer.py
+│   └── test_checker.py
+├── workflows/
+│   └── README.md
+├── .gitignore
+├── requirements.txt
+├── README.md
+└── LICENSE
 ```
 
-## Installation
+## Getting Started
+
+### Prerequisites
+
+- Python 3.10 or a compatible Python 3 version
+- Git
+
+### Installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/amoltathesoftwareengineer/AI-Coding-Workflow-Toolkit.git
 cd AI-Coding-Workflow-Toolkit
 ```
 
-If Python dependencies are configured:
-
-```bash
-python -m venv .venv
-```
-
-Activate on Windows:
-
-```bash
-.venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+No third-party packages are required for the core scripts if `requirements.txt` contains only comments.
 
 ## Usage
 
-Use the documented scripts and templates for the workflows implemented in the repository. Review commands before running them on important projects.
+### 1. Analyze a Repository
 
-## Safety
+Run the analyzer against the current directory:
 
-- Review generated code before accepting changes.
-- Do not expose credentials or private repository content to unapproved services.
+```bash
+python scripts/analyze_repository.py .
+```
+
+This reports repository statistics and identifies Python files.
+
+### 2. Check Python Syntax
+
+```bash
+python scripts/check_python.py .
+```
+
+This checks Python files for syntax errors without running the application code.
+
+### 3. Run Automated Tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+The test suite checks repository analysis and Python syntax-checking functionality.
+
+## Safety and Best Practices
+
+- Review code before accepting AI-generated suggestions.
+- Never expose credentials, API keys, or confidential repository content to unapproved services.
+- Review scripts before running them against important repositories.
 - Require confirmation before destructive file operations.
-- Run tests before merging changes.
+- Run automated tests before merging changes.
+
+## Current Status
+
+The core repository analyzer, Python syntax checker, reusable templates, workflow configuration, and unit tests are implemented.
+
+The current version focuses on local development workflows and does not claim to provide a fully autonomous AI coding agent.
 
 ## Future Enhancements
 
-- CI workflow templates
-- Pull request summaries
-- Repository health checks
-- Configurable AI providers
-- Development metrics
+- Continuous integration workflow examples
+- Git change summaries and pull request assistance
+- Repository health and quality checks
+- Optional integrations with configurable AI providers
+- Development metrics and reporting
 
 ## Author
 
-Amol Tathe
+**Amol Tathe**
 
-GitHub: https://github.com/amoltathesoftwareengineer
+- GitHub: https://github.com/amoltathesoftwareengineer
+- Repository: https://github.com/amoltathesoftwareengineer/AI-Coding-Workflow-Toolkit
 
 ## License
 
-Add an appropriate open-source license before permitting reuse.
-
+See the `LICENSE` file for the applicable open-source license.
