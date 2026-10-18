@@ -1,0 +1,35 @@
+
+{
+  "project_name": "AI-Coding-Workflow-Toolkit",
+  "version": "1.0.0",
+  "excluded_directories": [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "node_modules",
+    ".idea",
+    ".vscode",
+    "build",
+    "dist"
+  ],
+  "tracked_extensions": [
+    ".py",
+    ".md",
+    ".json",
+    ".yml",
+    ".yaml",
+    ".toml",
+    ".txt",
+    ".sql",
+    ".js",
+    ".ts",
+    ".html",
+    ".css"
+  ],
+  "checks": {
+    "repository_analysis": true,
+    "python_syntax_check": true,
+    "automated_tests": true
+  }
+}
