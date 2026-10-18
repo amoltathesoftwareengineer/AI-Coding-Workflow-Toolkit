@@ -3,3 +3,4 @@
 # Core scripts use the Python standard library.
 # Ruff is used for automated code quality checks.
 
+ruff
