@@ -1,4 +1,4 @@
-
+```yaml
 name: Python Tests
 
 on:
@@ -30,4 +30,5 @@ jobs:
         run: python scripts/check_python.py .
 
       - name: Check code quality with Ruff
-        run: python -m ruff check scripts tests
+        run: python -m ruff check scripts tests --fix
+```
