@@ -16,7 +16,6 @@ EXCLUDED_DIRS = {
 
 def analyze_repository(root_path):
     """Analyze repository structure and summarize its files."""
-
     root = Path(root_path).resolve()
 
     if not root.exists() or not root.is_dir():
