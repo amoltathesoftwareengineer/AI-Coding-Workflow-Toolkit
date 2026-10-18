@@ -128,4 +128,4 @@ The current version focuses on local development workflows and does not claim to
 
 ## License
 
-See the `LICENSE` file for the applicable open-source license.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
