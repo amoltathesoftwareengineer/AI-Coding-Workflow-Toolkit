@@ -1,15 +1,16 @@
 
-import os
 import argparse
+import os
 from collections import Counter
 from pathlib import Path
+
 
 EXCLUDED_DIRS = {
     ".git",
     ".venv",
     "venv",
     "__pycache__",
-    "node_modules"
+    "node_modules",
 }
 
 
@@ -26,7 +27,9 @@ def analyze_repository(root_path):
 
     for current, directories, filenames in os.walk(root):
         directories[:] = sorted(
-            d for d in directories if d not in EXCLUDED_DIRS
+            directory
+            for directory in directories
+            if directory not in EXCLUDED_DIRS
         )
 
         for directory in directories:
@@ -45,7 +48,8 @@ def analyze_repository(root_path):
     )
 
     python_files = [
-        filename for filename in file_list
+        filename
+        for filename in file_list
         if filename.lower().endswith(".py")
     ]
 
@@ -66,7 +70,7 @@ def main():
         "path",
         nargs="?",
         default=".",
-        help="Path to the repository"
+        help="Path to the repository",
     )
 
     args = parser.parse_args()
